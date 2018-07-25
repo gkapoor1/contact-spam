@@ -1,0 +1,5 @@
+entity.spam_filter_entity.add_form:
+  route_name: entity.spam_filter_entity.add_form
+  title: 'Add Spam filter entity'
+  appears_on:
+    - entity.spam_filter_entity.collection

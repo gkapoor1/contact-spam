@@ -1,0 +1,30 @@
+uuid: f76b44c3-999c-4264-ae78-12e677c95f0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - spam_filter
+id: spam_filter_entity.field_spam_status
+field_name: field_spam_status
+entity_type: spam_filter_entity
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: spam
+      label: Spam
+    -
+      value: ham
+      label: Ham
+    -
+      value: doubt
+      label: Doubt
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: 75f4e488-b25a-484d-a70c-05dec0e3085f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.spam_filter_entity.field_email
+  module:
+    - spam_filter
+id: spam_filter_entity.spam_filter_entity.field_email
+field_name: field_email
+entity_type: spam_filter_entity
+bundle: spam_filter_entity
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

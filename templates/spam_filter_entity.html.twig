@@ -1,0 +1,22 @@
+{#
+/**
+ * @file spam_filter_entity.html.twig
+ * Default theme implementation to present Spam filter entity data.
+ *
+ * This template is used when viewing Spam filter entity pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_spam_filter_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('spam_filter_entity') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

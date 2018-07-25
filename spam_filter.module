@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Contains spam_filter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\spam_filter\Entity\SpamFilterEntity;
+/**
+ * Implements hook_help().
+ */
+function spam_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the spam_filter module.
+    case 'help.page.spam_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Filters spam messages submitted via contact forms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+
+/**
+ * Implements hook_form_alter() on behalf of spam_filter.module.
+ */
+function spam_filter_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    if ($form_id == 'contact_message_feedback_form') {
+      $form['actions']['submit']['#submit'][] = 'spam_filter_status_extraction';
+    }
+}
+
+function spam_filter_status_extraction(&$form, FormStateInterface $form_state) {
+  $name = $form_state->getValue('name');
+  $mail = $form_state->getValue('mail');
+  $message = $form_state->getValue('message');
+  $client = \Drupal::httpClient();
+  $request = $client->post('http://205.147.99.79:3000/classify', [
+  	'form_params' => [
+  		'comment'=> $message[0]['value'],
+  		'mail'=> $mail,
+  		'url'=> 'https://opensenselabs.com'
+  	]
+  ]);
+  $response = json_decode($request->getBody(),true);
+  $spam_filter_entity = SpamFilterEntity::create([
+    'name' => $name,
+  	'field_email' => $mail,
+  	'field_message' => $message,
+  	'field_spam_status' => $response['label'],
+  	'field_classified_by' => $response['classified_by'],
+  	'field_probability' => $response['probability']
+  ]);
+  $spam_filter_entity->save();
+}

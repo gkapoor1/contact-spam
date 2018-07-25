@@ -1,0 +1,14 @@
+
+# Spam filter entity menu items definition
+entity.spam_filter_entity.collection:
+  title: 'Spam filter entity list'
+  route_name: entity.spam_filter_entity.collection
+  description: 'List Spam filter entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+spam_filter_entity.admin.structure.settings:
+  title: 'Spam filter entity settings'
+  description: 'Configure Spam filter entity entities'
+  route_name: spam_filter_entity.settings
+  parent: system.admin_structure

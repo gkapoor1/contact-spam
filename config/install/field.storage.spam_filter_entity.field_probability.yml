@@ -1,0 +1,20 @@
+uuid: 26004257-6b82-44ef-9976-b9ce537de16b
+langcode: en
+status: true
+dependencies:
+  module:
+    - spam_filter
+id: spam_filter_entity.field_probability
+field_name: field_probability
+entity_type: spam_filter_entity
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

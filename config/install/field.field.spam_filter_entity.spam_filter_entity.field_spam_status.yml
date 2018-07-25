@@ -1,0 +1,21 @@
+uuid: 239647ce-ae26-40d0-974c-6e2cf6e0d3d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.spam_filter_entity.field_spam_status
+  module:
+    - options
+    - spam_filter
+id: spam_filter_entity.spam_filter_entity.field_spam_status
+field_name: field_spam_status
+entity_type: spam_filter_entity
+bundle: spam_filter_entity
+label: 'Spam Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

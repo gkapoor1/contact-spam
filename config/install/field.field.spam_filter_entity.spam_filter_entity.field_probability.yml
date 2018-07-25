@@ -1,0 +1,24 @@
+uuid: 034cf12d-30fa-4570-ae75-80b574779b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.spam_filter_entity.field_probability
+  module:
+    - spam_filter
+id: spam_filter_entity.spam_filter_entity.field_probability
+field_name: field_probability
+entity_type: spam_filter_entity
+bundle: spam_filter_entity
+label: Probability
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

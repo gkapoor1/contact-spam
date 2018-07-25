@@ -1,0 +1,5 @@
+name: 'Spam Filter'
+type: module
+description: 'Filters spam messages submitted via contact forms.'
+core: 8.x
+package: 'Custom'

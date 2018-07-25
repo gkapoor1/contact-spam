@@ -1,0 +1,19 @@
+add spam filter entity entities:
+  title: 'Create new Spam filter entity entities'
+
+administer spam filter entity entities:
+  title: 'Administer Spam filter entity entities'
+  description: 'Allow to access the administration form to configure Spam filter entity entities.'
+  restrict access: true
+
+delete spam filter entity entities:
+  title: 'Delete Spam filter entity entities'
+
+edit spam filter entity entities:
+  title: 'Edit Spam filter entity entities'
+
+view published spam filter entity entities:
+  title: 'View published Spam filter entity entities'
+
+view unpublished spam filter entity entities:
+  title: 'View unpublished Spam filter entity entities'
