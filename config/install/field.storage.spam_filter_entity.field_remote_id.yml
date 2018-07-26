@@ -1,0 +1,21 @@
+uuid: 5b2ed7a9-c72c-41c9-93a7-b9a5e1a19c05
+langcode: en
+status: true
+dependencies:
+  module:
+    - spam_filter
+id: spam_filter_entity.field_remote_id
+field_name: field_remote_id
+entity_type: spam_filter_entity
+type: string
+settings:
+  max_length: 500
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

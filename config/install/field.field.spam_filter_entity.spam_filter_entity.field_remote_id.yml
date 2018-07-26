@@ -1,0 +1,20 @@
+uuid: ae6036d0-45fe-4ee2-a879-05cc82a4462f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.spam_filter_entity.field_remote_id
+  module:
+    - spam_filter
+id: spam_filter_entity.spam_filter_entity.field_remote_id
+field_name: field_remote_id
+entity_type: spam_filter_entity
+bundle: spam_filter_entity
+label: 'Remote ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
